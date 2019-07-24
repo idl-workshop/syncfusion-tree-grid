@@ -1,6 +1,21 @@
-  <ejs-treegrid [dataSource]='stages' childMapping='steps' [treeColumnIndex]='1' [toolbar]='toolbarOptions' [editSettings]='editSettings' allowTextWrap='true'>
-          <e-columns>
-              <e-column field='id' headerText='Stage' width='70' textAlign='Right' [isPrimaryKey]='true'></e-column>
-              <e-column field='name' headerText='Stage Name' width='200'></e-column>
-          </e-columns>
-      </ejs-treegrid>
+<ejs-treegrid
+  [dataSource]="stages"
+  childMapping="steps"
+  [treeColumnIndex]="0"
+  [toolbar]="toolbarOptions"
+  [editSettings]="editSettings"
+  allowTextWrap="true"
+>
+  <e-columns>
+    <e-column
+      field="id"
+      headerText="Stage"
+      width="70"
+      textAlign="left"
+      [isPrimaryKey]="true"
+      allowEditing="true"
+    ></e-column>
+    <e-column field="name" headerText="Stage Name" width="200"></e-column>
+    <e-column field="moveUpDown" headerText="Move Up/Down" width="200" allowEditing="false"></e-column>
+  </e-columns>
+</ejs-treegrid>
